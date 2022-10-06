@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>学习空间</title>
+  <link rel="stylesheet" href="style/css/normalize.css">
+  <link rel="stylesheet" href="style/css/admin.css">
+</head>
+
+<body class="bggrey">
+  <section class="logres">
+    <!--<div class="logo"></div>-->
+    <h1>帐号注册</h1>
+    <form action="login.html" method="get">
+      <input type="text" placeholder="用户名" name="name" required min="5">
+      <input type="email" placeholder="邮箱" name="email" required>
+      <input type="number" placeholder="电话" name="number" required>
+      <input type="password" placeholder="密码" name="pad" required>
+      <input type="file" placeholder="我的照片" required>
+      <input type="date" name="user_date" required>
+      
+      <select>
+        <option>浙江</option>
+        <option>福建</option>
+        <option>广东</option>
+        <option>江苏</option>
+      </select>
+      <button type="submit" id="btn">注册</button>
+    </form>
+    <ul class="mm">
+      <a href="login.html">已有账号 直接登陆</a>
+
+    </ul>
+  </section>
+  <footer class="footer">
+    <div>
+      <p>©2022</p>
+    </div>
+  </footer>
+
+</body>
+</html>

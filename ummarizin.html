@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>学习空间</title>
+  <link rel="stylesheet" href="style/css/normalize.css">
+  <link rel="stylesheet" href="style/css/admin.css">
+</head>
+
+<body>
+  <header class="h-header u-left">
+    <dl class="main">
+      <ul class="horizo">
+        <li><a><i></i><i></i><i></i></a></li>
+      </ul>
+      <dt>
+        <p>学习空间</p>
+      </dt>
+      <nav>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="list.html">课程介绍</a></li>
+        <li class="curr"><a href="ummarizin.html">学生名单</a></li>
+        <li><a href="detail.html">详情介绍</a></li>
+        <li><a href="login.html">登录</a></li>
+        <li><a href="register.html">注册</a></li>
+      </nav>
+    </dl>
+  </header>
+
+  <main class="main">
+    <section class="m-ummarm">
+      <h2>学生名单</h2>
+      <div class="add"><a id="add_btn">新增</a>
+        <input id="Ktext" type="text"> <a id="search_btn"> 查询</a>
+        <a id="back_btn">返回</a>
+      </div>
+
+      <table id="table">
+        <tr id="trr">
+          <th>ID</th>
+          <th>名字</th>
+          <th>身份</th>
+          <th>功能</th>
+        </tr>
+        <tbody id="hide_tbody">
+          <tr style="display:none" id="trr">
+            <td id="no_id"><input value='' type='text'></td>
+            <td><input value='' type='text'></td>
+            <td><input value='' type='text'></td>
+            <td id="a"><a id="save_btn">保存</a>
+              <a id="edit_btn" style="display:none">修改</a>
+              <a id="del_btn">删除</a>
+            </td>
+          </tr>
+        </tbody>
+        <tbody id="show_tbody">
+          <tr id="trr">
+            <td id="no_id">1</td>
+            <td>郑军翔</td>
+            <td>身份哥</td>
+            <td id="a"><a id="save_btn" style="display:none">保存</a>
+              <a id="edit_btn">修改</a>
+              <a id="del_btn">删除</a>
+            </td>
+          </tr>
+          <tr id="trr">
+            <td id="no_id">2</td>
+            <td>张三</td>
+            <td>web前端课代表</td>
+            <td id="a"><a id="save_btn" style="display:none">保存</a>
+              <a id="edit_btn">修改</a>
+              <a id="del_btn">删除</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <br> <br>
+  </main>
+
+  <!--脚底 版权-->
+  <footer class="footerImg">
+    <div>
+      <p>©2022</p>
+    </div>
+  </footer>
+</body>
+<script src="style/js/jquery.js"></script>
+<script src="style/js/admin.js"></script>
+<script>
+  $(document).ready(function () {
+    var tb = $("#table");
+
+    //添加 
+    $("#add_btn").click(function () {
+      var hideTr = $("#hide_tbody", tb).children().first();
+      var newTr = hideTr.clone().show();
+      $("#show_tbody", tb).append(newTr);
+    });
+
+    //保存 
+    $("#save_btn", tb).die('click').live('click', function () {
+      var tr = $(this).parent().parent();
+      $("input[type='text']", tr).each(function (i, el) {
+        el = $(el);
+        el.parent().text(el.val());
+        el.remove();
+      });
+      $("#save_btn", tr).hide();
+      $("#edit_btn", tr).show();
+    });
+
+    //修改 
+    $("#edit_btn", tb).die('click').live('click', function () {
+      var tr = $(this).parent().parent();
+      $("td:not('#a')", tr).each(function (i, el) {
+        el = $(el);
+        var html = "<input value='" + el.text() + "' type='text'>";
+        el.html(html);
+      });
+      $("#edit_btn", tr).hide();
+      $("#save_btn", tr).show();
+    });
+
+    //删除 
+    $("#del_btn", tb).die('click').live('click', function () {
+      $(this).parent().parent().remove();
+    });
+
+    //查询 
+    $("#search_btn").click(function () {
+      var key = $("#Ktext").val();
+      var sbody = $("#show_tbody");
+      var trr = $("#trr", sbody);
+      var keyword = $("#no_id", sbody).text();
+      for (var i = 0; i < keyword.length; i++) {
+        if (keyword[i] == key[0]) {
+          trr.eq(i).show();
+        } else {
+          trr.eq(i).hide();
+        }
+      }
+    });
+    //返回 
+    $("#back_btn").click(function () {
+      var sbody = $("#show_tbody");
+      $("#trr", sbody).show();
+
+    });
+  }); 
+</script>
+
+</html>

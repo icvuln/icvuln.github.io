@@ -1,76 +1,134 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>lht's blog</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/styles.min.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>学习空间</title>
+  <link rel="stylesheet" href="style/css/normalize.css">
+  <link rel="stylesheet" href="style/css/admin.css">
+
+
 </head>
 
 <body>
-    <!-- Start: Navbar Right Links -->
-    <nav class="navbar navbar-light navbar-expand-md py-3">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="index.html"><span>lht‘s blog</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-2">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">首页</a></li>
-                    <li class="nav-item"><a class="nav-link" href="archive.html">归档</a></li>
-                    <li class="nav-item"><a class="nav-link" href="talk.html">讨论</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav><!-- End: Navbar Right Links -->
-    <!-- Start: Articles Badges -->
-    <div class="container py-4 py-xl-5">
-        <div class="row mb-5">
-            <div class="col-md-8 col-xl-6 text-center mx-auto">
-                <h2>lht's blog</h2>
-                <p class="w-lg-50">web前端可真难学</p>
-            </div>
-        </div>
-        <hr>
-        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-            <div class="col">
-                <div class="p-4">
-                    <h4>Hello World</h4>
-                    <p>hello world!</p>
-                    <p>2022-09-25</p>
-                    <div class="d-flex">
-                        <div>
-                            <p class="fw-bold mb-0">lht</p>
-                        </div>
-                    </div><a class="btn btn-primary fs-5 py-2 px-4" role="button" href="articles/hello_world.html" style="margin-right: -10px;">more</a>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-4">
-                    <h4>Hello Web</h4>
-                    <p>hello web!</p>
-                    <p>2022-09-25</p>
-                    <div class="d-flex">
-                        <div>
-                            <p class="fw-bold mb-0">lht</p>
-                        </div>
-                    </div><a class="btn btn-primary fs-5 py-2 px-4" role="button" href="articles/hello_web.html" style="margin-right: -10px;">more</a>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-4">
-                    <h4>Hello HTML</h4>
-                    <p>hello html!</p>
-                    <p>2022-09-25</p>
-                    <div class="d-flex">
-                        <div>
-                            <p class="fw-bold mb-0">lht</p>
-                        </div>
-                    </div><a class="btn btn-primary fs-5 py-2 px-4" role="button" href="articles/hello_html.html" style="margin-right: -10px;">more</a>
-                </div>
-            </div>
-        </div>
-    </div><!-- End: Articles Badges -->
-    <script src="assets/js/main.js"></script>
+  <header class="h-header u-left">
+    <dl class="main">
+      <ul class="horizo">
+        <li><a><i></i><i></i><i></i></a></li>
+      </ul>
+      <dt>
+        <p>学习空间</p>
+      </dt>
+      <nav>
+        <li class="curr"><a href="index.html">首页</a></li>
+        <li><a href="list.html">课程介绍</a></li>
+        <li><a href="ummarizin.html">学生名单</a></li>
+        <li><a href="detail.html">详情介绍</a></li>
+        <li><a href="login.html">登录</a></li>
+        <li><a href="register.html">注册</a></li>
+      </nav>
+    </dl>
+  </header>
+  <section class="m-carousel" style="background:#F2F2F2; padding:10px">
+    <div id="wrap">
+      <ul id="content">
+        <a>
+          <li><img src="style/img/index/carousel/1.jpg"></li>
+        </a>
+        <a>
+          <li><img src="style/img/index/carousel/2.png"></li>
+        </a>
+        <a>
+          <li><img src="style/img/index/carousel/3.png"></li>
+        </a>
+      </ul>
+      <ul id="tips">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+    </div>
+  </section>
+  <section class="main">
+    <main style="margin:20px auto;" class="clear">
+      <section class="travelleft">
+        <h1 class="recomctions"><i>|</i><span>部分课程</span></h1>
+        <ul class="jiandianzs">
+          <a>
+            <img src="style/img/index/course/dazhi.jpg">
+            <p>大学生职业发展与就业指导3</p>
+          </a>
+          <a>
+            <img src="style/img/index/course/mayuan.jpg">
+            <p>马克思主义基本原理概论</p>
+          </a>
+          <a>
+            <img src="style/img/index/course/python.png">
+            <p>网络编程</p>
+          </a>
+        </ul>
+        <ul class="jiandianzs2">
+          <a>
+            <img src="style/img/index/course/os.jpg">
+            <p>操作系统</p>
+          </a>
+          <a>
+            <img src="style/img/index/course/tiyu.jpg">
+            <p>大学体育</p>
+          </a>
+          <a href="detail.html">
+            <img src="style/img/index/course/web.png">
+            <p>web前端</p>
+          </a>
+        </ul>
+      </section>
+      <section class="travelright">
+        <h1 class="recomctions"><span style=" border-bottom:2px solid rgb(255, 102, 0); margin-left:0">学科</span></h1>
+        <dl class="Tourings">
+          <dt>学科分类</dt>
+          <a>大学英语</a>
+          <a>大学物理</a>
+          <a>高等数学</a>
+          <a href="detail.html">web前端</a>
+        </dl>
+      </section>
+    </main>
+  </section>
+  <main class="main">
+    <section class="m-cause">
+      <p></p>
+      <h1>学习空间介绍</h1>
+      <p></p>
+    </section>
+    <section class="m-count">
+      <div>
+
+        <p>
+          介绍<br>
+          这个空间直接无敌。
+        </p>
+      </div>
+      
+    </section>
+  </main>
+  <!--<section class="main"><video src="style/video.ogv" controls style="width:100%"></video></section>-->
+  <!--脚底 版权-->
+  <footer class="footerImg">
+    <div>
+      <p>©2022</p>
+      <p class="time1"></p>
+    </div>
+  </footer>
 </body>
+<script src="style/js/jquery.js"></script>
+<script src="style/js/admin.js"></script>
+<script src="style/js/carousel.js"></script>
 
 </html>
